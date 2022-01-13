@@ -29,7 +29,7 @@ const Dashboard = () => {
             <Animatable.View style = {{ width: '100%', height: '30%', padding: 30}} animation = "fadeInUp" delay={1000}>
                 <View style = {{flexDirection: 'row'}}>
                     <View style = {{flexDirection: 'column', width: '50%'}}>
-                        <Text style = {{marginLeft: '2%'}}>Hi David!</Text>
+                        <Text style = {{marginLeft: '2%'}}>Hi Aman!</Text>
                         <Text style = {{marginLeft: '2%', fontSize: 20, fontWeight: 'bold', color: 'black'}}>Explore today's world news</Text>
                     </View>
                     <Icon name = 'menu' size = {40} style = {{marginLeft: '50%'}}>

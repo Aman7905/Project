@@ -21,7 +21,10 @@ import BookmarkScreen from './BookmarkScreen';
 import SupportScreen from './SupportScreen';
 import SettingScreen from './SettingScreen';
 import News from './News';
-
+import {Picker} from '@react-native-picker/picker';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import ImagePicker from './ImagePicker';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 function TabRoutes() {
 
