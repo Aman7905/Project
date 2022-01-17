@@ -11,62 +11,56 @@ import LottieView from 'lottie-react-native';
 import { AuthContext } from './context';
 import RootStackScreen from './RootStackScreen';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import AsyncStorage from '@react-native-community/async-storage';
 import LinearGradient from 'react-native-linear-gradient';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import StartScreen from './StartScreen';
-import Dashboard from './Dashboard';
-import LoginScreen from './LoginScreen';
-import SignUp from './SignUp';
-import BookmarkScreen from './BookmarkScreen';
-import SupportScreen from './SupportScreen';
-import SettingScreen from './SettingScreen';
-import News from './News';
+
 import {Picker} from '@react-native-picker/picker';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import ImagePicker from './ImagePicker';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
-function TabRoutes() {
+// function TabRoutes() {
 
-  // const isFocused = useIsFocused();
+//   // const isFocused = useIsFocused();
   
-    return (
-        <View style = {styles.container}>
-        <Animatable.Text 
-        style = {{
-                fontSize: 30, 
-                fontWeight: 'bold', 
-                alignSelf: 'center', 
-                color: 'black', 
-                marginTop: '20%',
-                marginBottom:'3%',
-                }} 
+//     return (
+//         <View style = {styles.container}>
+//         <Animatable.Text 
+//         style = {{
+//                 fontSize: 30, 
+//                 fontWeight: 'bold', 
+//                 alignSelf: 'center', 
+//                 color: 'black', 
+//                 marginTop: '20%',
+//                 marginBottom:'3%',
+//                 }} 
           
-          animation = "bounceIn" delay={500}>People Polly</Animatable.Text>
-          <Tab.Navigator 
-                  screenOptions={{ 
-                  tabBarIndicatorStyle: {backgroundColor: '#01021c',},
-                  // swipeEnabled: (false), 
-                  tabBarActiveTintColor: '#fff',
-                  tabBarInactiveTintColor: 'gray',
-                  tabBarStyle: { backgroundColor: '#01021c', height:50,}, 
-                  tabBarLabelStyle: { fontSize: 15, fontWeight:'bold', letterSpacing:2}, 
-                  gestureEnabled: false,
-                  }} 
-          style = {{
-                  borderTopLeftRadius: 40, 
-                  borderTopRightRadius: 40,
-                  borderBottomStartRadius:40,
-                  borderBottomEndRadius:40,
-                  // color:'red'
-                  }}>
+//           animation = "bounceIn" delay={500}>People Polly</Animatable.Text>
+//           <Tab.Navigator 
+//                   screenOptions={{ 
+//                   tabBarIndicatorStyle: {backgroundColor: '#01021c',},
+//                   // swipeEnabled: (false), 
+//                   tabBarActiveTintColor: '#fff',
+//                   tabBarInactiveTintColor: 'gray',
+//                   tabBarStyle: { backgroundColor: '#01021c', height:50,}, 
+//                   tabBarLabelStyle: { fontSize: 15, fontWeight:'bold', letterSpacing:2}, 
+//                   gestureEnabled: false,
+//                   }} 
+//           style = {{
+//                   borderTopLeftRadius: 40, 
+//                   borderTopRightRadius: 40,
+//                   borderBottomStartRadius:40,
+//                   borderBottomEndRadius:40,
+//                   // color:'red'
+//                   }}>
           
-          <Tab.Screen name="Login" component={LoginScreen}/>
-          <Tab.Screen name="SignUp" component={SignUp} />
-          </Tab.Navigator>
-      </View>
-    );
-  };
+//           <Tab.Screen name="Login" component={LoginScreen}/>
+//           <Tab.Screen name="SignUp" component={SignUp} />
+//           </Tab.Navigator>
+//       </View>
+//     );
+//   };
 
 
 const App = () => {
@@ -180,9 +174,7 @@ const App = () => {
         { loginState.userToken !== null ? (
           <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName={'StartScreen'}>
           <Stack.Screen name="StartScreen" component={StartScreen} />
-          <Stack.Screen name="LoginScreen" component={TabRoutes} />
-          <Stack.Screen name="SignUp" component={TabRoutes} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
+          
             </Stack.Navigator>
         )
         :
@@ -195,7 +187,7 @@ const App = () => {
 }
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
-
+// const DrawerTab = createDrawerNavigator();
 const styles = StyleSheet.create({
   container: {
     flex: 1,

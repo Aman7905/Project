@@ -8,7 +8,7 @@ import * as Animatable from 'react-native-animatable';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder';
 import {Input, Icon } from 'react-native-elements';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AsyncStorage from '@react-native-community/async-storage';
+
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { AuthContext } from './context';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';

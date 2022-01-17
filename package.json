@@ -10,7 +10,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/datetimepicker": "^5.1.0",
     "@react-native-masked-view/masked-view": "^0.2.6",
     "@react-native-picker/picker": "^2.2.1",
@@ -35,6 +34,7 @@
     "react-native-modal-datetime-picker": "^13.0.1",
     "react-native-pager-view": "^5.4.9",
     "react-native-paper": "^4.11.1",
+    "react-native-reanimated": "^2.3.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-shimmer": "^0.6.0",
